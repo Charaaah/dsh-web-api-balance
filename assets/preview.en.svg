@@ -1,0 +1,83 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 204" width="760" height="204" role="img" aria-label="dsh-web-api-balance: a balance chip beside the composer, expanding on hover into balance and per-conversation cost columns">
+  <title>dsh-web-api-balance</title>
+  <desc>Diagram, not a screenshot. On the left, the persistent balance chip on the composer toolbar. On the right, the panel shown on hover: account balance in the left column, this conversation's cost in the right one.</desc>
+
+  <style>
+    .lbl  { font: 500 12px/1 "Segoe UI", system-ui, sans-serif; }
+    .val  { font: 400 12px/1 "Segoe UI", system-ui, sans-serif; font-variant-numeric: tabular-nums; }
+    .hint { font: 400 11px/1 "Segoe UI", system-ui, sans-serif; }
+    .shell   { fill: #ffffff; stroke: rgba(0,0,0,.12); }
+    .lay2    { fill: rgba(0,0,0,.04); }
+    .panel   { fill: #ffffff; stroke: rgba(0,0,0,.10); }
+    .rule    { stroke: rgba(0,0,0,.12); }
+    .p   { fill: rgba(0,0,0,.88); }
+    .s   { fill: rgba(0,0,0,.55); }
+    .ln  { stroke: rgba(0,0,0,.45); fill: none; }
+    .ok  { fill: #12a150; }
+    @media (prefers-color-scheme: dark) {
+      .shell { fill: #1c1c1f; stroke: rgba(255,255,255,.14); }
+      .lay2  { fill: rgba(255,255,255,.06); }
+      .panel { fill: #232327; stroke: rgba(255,255,255,.12); }
+      .rule  { stroke: rgba(255,255,255,.14); }
+      .p { fill: rgba(255,255,255,.92); }
+      .s { fill: rgba(255,255,255,.55); }
+      .ln { stroke: rgba(255,255,255,.5); }
+      .ok { fill: #35c46f; }
+    }
+  </style>
+
+  <text class="hint s" x="16" y="26">Composer toolbar (left of Send)</text>
+
+  <rect class="shell" x="16" y="40" width="300" height="36" rx="10"/>
+  <rect class="lay2"  x="28" y="52" width="150" height="12" rx="6"/>
+
+  <rect class="shell" x="210" y="44" width="66" height="28" rx="8"/>
+  <circle class="ok" cx="225" cy="58" r="3"/>
+  <text class="val p" x="234" y="62">¥15.00</text>
+
+  <rect class="shell" x="210" y="92" width="88" height="28" rx="8"/>
+  <circle class="ok" cx="225" cy="106" r="3"/>
+  <text class="val p" x="234" y="110">¥15.00</text>
+  <line class="rule" x1="276" y1="92" x2="276" y2="120"/>
+  <rect class="lay2" x="276" y="92" width="22" height="28" rx="0"/>
+  <path class="ln" d="M284 107h8M288 103v8" stroke-width="1.2"/>
+
+  <text class="hint s" x="16" y="88">Idle: the 22px top-up slice is 0 wide, invisible</text>
+  <text class="hint s" x="16" y="140">Hover: it slides out. Click the left half to refresh, the right half to top up.</text>
+
+  <path class="rule" d="M330 106h46" stroke-width="1.2" fill="none" marker-end="url(#a)"/>
+  <defs>
+    <marker id="a" viewBox="0 0 8 8" refX="6" refY="4" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M0 0l8 4-8 4z" fill="#8a8a8e"/>
+    </marker>
+  </defs>
+  <text class="hint s" x="330" y="99">hover</text>
+
+  <rect class="panel" x="384" y="16" width="360" height="158" rx="12"/>
+
+  <text class="lbl s" x="402" y="44">Total</text>
+  <text class="val p" x="560" y="44" text-anchor="end">¥15.00</text>
+  <text class="lbl s" x="402" y="64">Topped up</text>
+  <text class="val p" x="560" y="64" text-anchor="end">¥13.50</text>
+  <text class="lbl s" x="402" y="84">Granted</text>
+  <text class="val p" x="560" y="84" text-anchor="end">¥1.50</text>
+  <line class="rule" x1="402" y1="96" x2="560" y2="96"/>
+  <text class="lbl s" x="402" y="114">Updated</text>
+  <text class="val p" x="560" y="114" text-anchor="end">20:00:00</text>
+  <text class="lbl s" x="402" y="132">Source</text>
+  <text class="val p" x="560" y="132" text-anchor="end">DeepSeek account</text>
+
+  <line class="rule" x1="580" y1="34" x2="580" y2="146"/>
+
+  <text class="lbl s" x="598" y="44">This session</text>
+  <text class="lbl s" x="726" y="44" text-anchor="end">off-peak</text>
+  <text class="lbl s" x="598" y="64">Cache hit</text>
+  <text class="val p" x="726" y="64" text-anchor="end">¥0.30</text>
+  <text class="lbl s" x="598" y="84">Cache miss</text>
+  <text class="val p" x="726" y="84" text-anchor="end">¥18.00</text>
+  <text class="lbl s" x="598" y="104">Output</text>
+  <text class="val p" x="726" y="104" text-anchor="end">¥13.50</text>
+  <line class="rule" x1="598" y1="116" x2="726" y2="116"/>
+  <text class="lbl p" x="598" y="136">Total</text>
+  <text class="val p" x="726" y="136" text-anchor="end">¥31.80</text>
+</svg>

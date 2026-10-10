@@ -1,0 +1,60 @@
+{
+  "name": "dsh-web-api-balance",
+  "version": "1.0.3",
+  "description": "在 Harness Web 界面显示 DeepSeek API 余额与本次对话消耗：输入框旁的常驻余额胶囊，悬停展开明细。",
+  "type": "module",
+  "icon": "./icon.svg",
+  "exports": {
+    ".": "./host.js",
+    "./host": "./host.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "client.js",
+    "host.js",
+    "index.js",
+    "cordis.patch.yml",
+    "icon.svg",
+    "locale/*.json",
+    "assets/*.svg",
+    "README.md",
+    "LICENSE",
+    "release.json"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-slots"
+      ]
+    }
+  },
+  "license": "MIT",
+  "author": "Charaaah",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Charaaah/dsh-web-api-balance.git"
+  },
+  "homepage": "https://github.com/Charaaah/dsh-web-api-balance#readme",
+  "bugs": {
+    "url": "https://github.com/Charaaah/dsh-web-api-balance/issues"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "dsh",
+    "deepseek-harness",
+    "deepseek",
+    "cordis",
+    "cordis-plugin",
+    "deepseek-api",
+    "api-balance",
+    "dsh-web-ui",
+    "web-ui"
+  ]
+}
