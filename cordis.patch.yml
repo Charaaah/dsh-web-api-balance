@@ -1,0 +1,22 @@
+# dsh-web-api-balance —— bundle patch
+#
+# 往 profile 配置树里插入一行插件。id 与包名保持一致，方便按 id 覆盖配置：
+#
+#   - id: dsh-web-api-balance
+#     config:
+#       apiKey: sk-xxxx            # 直接写 key（优先级最高）
+#       apiKeyEnv: DEEPSEEK_API_KEY # 或写 key 的环境变量名，默认值就是它
+#       baseURL: https://api.deepseek.com
+#       refreshSeconds: 300
+#
+# 不写 config 时按 apiKey -> 环境变量/凭证服务里的 DEEPSEEK_API_KEY 顺序回退，
+# 所以「设置 → 模型」里已经存过 DeepSeek key 的话可以直接用。
+- insert:
+    - id: dsh-web-api-balance
+      name: 'dsh-web-api-balance'
+      inject: [webServer]
+      config:
+        apiKey: ''
+        apiKeyEnv: DEEPSEEK_API_KEY
+        baseURL: https://api.deepseek.com
+        refreshSeconds: 300
