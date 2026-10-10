@@ -1,0 +1,18 @@
+# Nothing here is needed to run the plugin: it has no build step and no dependencies.
+# These are the things that show up when you develop it in place.
+node_modules/
+pnpm-lock.yaml
+*.log
+.DS_Store
+Thumbs.db
+
+# Scratch copies and render output
+publish/repo/
+publish/.pack-stage/
+assets/*.png
+
+# Nothing credential-shaped may ever be committed here, even by accident: a
+# temporary npm config holding a publish token is exactly this filename.
+.npmrc
+**/.npmrc
+.publish-npmrc

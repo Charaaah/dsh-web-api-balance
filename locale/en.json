@@ -1,0 +1,4 @@
+{
+  "title": "DeepSeek API Balance",
+  "description": "Shows the DeepSeek API account balance in the Web UI: a persistent chip beside the composer that reveals the wallet detail on hover."
+}

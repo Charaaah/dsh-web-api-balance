@@ -1,0 +1,6 @@
+{
+  "name": "dsh-web-api-balance",
+  "version": "1.0.2",
+  "dshVersion": "0.2.0-rc.2",
+  "builtBy": "npm pack --ignore-scripts, against a staging copy of the repository"
+}
